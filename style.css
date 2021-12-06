@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background: #0f1424;
+}
+
+.container {
+  border: 1px solid red;
+  width: 88%;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.2rem;
+}
+
+.menu-card {
+  background-color: #1c1f4a;
+  border-radius: 1.6rem;
+  width: 100%;
+}
+
+.menu-card .card-report {
+  background-color: #5847eb;
+  border-radius: 1.6rem;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1.8rem;
+}
+
+.menu-card .card-report img {
+  width: 26%;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.menu-card .card-report .report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu-card .card-report .report p {
+  color: #bdc1ff;
+  font-size: 1.5rem;
+}
+
+.menu-card .card-report .report .name {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.menu-card .card-report .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.5rem;
+}
+
+.menu-card .card-report .menu-link {
+  color: #6f76c8;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.menu-card .card-report .menu-link:hover {
+  color: white;
+}
+
+.menu-card .card-report .menu-active {
+  color: white;
+}
+
+.menu-card .regular-card {
+  width: 100%;
+  border-radius: 1.6rem;
+  background-image: url(..images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: 92% -1rem;
+}
+
+.menu-card .regular-card .property-card {
+  position: relative;
+  background-color: #1c1f4a;
+  margin-top: 4rem;
+  border-radius: 1.6rem;
+  padding: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.menu-card .regular-card .property-card:hover {
+  background-color: #33387a;
+}
+
+.menu-card .regular-card .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.menu-card .regular-card .title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  z-index: 98;
+}
+
+.menu-card .regular-card .points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*It is not possible to have hover effcet on child element (points) and don't have it on parent element (card). 
+                You should use or 35 or some ugly css tricks
+                I try second variant. */
+}
+
+.menu-card .regular-card .points:hover .point {
+  background-color: white;
+}
+
+.menu-card .regular-card .points:before {
+  content: '';
+  background: pink;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.6rem;
+  display: none;
+  z-index: 1;
+}
+
+.menu-card .regular-card .points:hover::before {
+  background-color: #1c1f4a;
+  display: block;
+}
+
+.menu-card .regular-card .points .point {
+  background-color: #bdc1ff;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  margin: 0.2rem;
+  z-index: 99;
+}
+
+.menu-card .regular-card .points .row-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  z-index: 97;
+}
+
+.menu-card .regular-card .points .hours {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.menu-card .regular-card .points .description {
+  color: #bdc1ff;
+  font-size: 1.5rem;
+}
+
+.work {
+  background-color: #ff8c66;
+  background-image: url(../images/icon-work.svg);
+}
+
+.play {
+  background-color: #56c2e6;
+  background-image: url(../images/icon-play.svg);
+}
+
+.study {
+  background-color: #ff5c7c;
+  background-image: url(../images/icon-study.svg);
+}
+
+.excercise {
+  background-color: #4acf81;
+  background-image: url(../images/icon-exercise.svg);
+}
+
+.social {
+  background-color: #56c2e6;
+  background-image: url(../images/icon-social.svg);
+}
+
+.selfcare {
+  background-color: #f1c65b;
+  background-image: url(../images/icon-self-care.svg);
+}
+/*# sourceMappingURL=style.css.map */
